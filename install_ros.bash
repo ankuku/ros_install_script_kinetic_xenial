@@ -1,5 +1,13 @@
 #!/bin/bash -exv
 
+###############
+# Before we install Ubuntu, it's important to install the right video drivers on your computer.
+# Here, we are installing MESA drivers which has OpenGL driver support for linux.
+sudo add-apt-repository ppa:ubuntu-x-swat/updates -y
+sudo apt-get update
+sudo apt-get dist-upgrade -y
+###############
+
 UBUNTU_VER=$(lsb_release -sc)
 ROS_VER=kinetic
 [ "$UBUNTU_VER" = "trusty" ] && ROS_VER=indigo
@@ -23,7 +31,14 @@ sudo apt-get install -y ros-${ROS_VER}-desktop-full
 
 ls /etc/ros/rosdep/sources.list.d/20-default.list && sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
 sudo rosdep init 
+
+###############
+# This is important! If you are using any other OS based on Ubuntu/Debian but not Ubuntu itself, /
+# you might have to run this line on a terminal separately when you see OS not detected error - /
+# "OsNotDetected("Could not detect OS, tried %s" % attempted)"
 export ROS_OS_OVERRIDE="ubuntu:xenial"
+###############
+
 rosdep update
 
 sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools
@@ -65,7 +80,8 @@ sudo usermod -aG dialout $USER
 ### instruction for user ###
 set +xv
 
-echo '***INSTRUCTION*****************'
-echo '* do the following command    *'
+echo '*********INSTRUCTION***********'
+echo '*execute the following command*'
 echo '* $ source ~/.bashrc          *'
 echo '*******************************'
+source ~/.bashrc
