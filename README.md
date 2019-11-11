@@ -3,4 +3,4 @@ Script for unattended installation for ROS Kinetic Kame on Ubuntu 16 (Xenial) ba
 
 There is little work I did over the awesome repositories of ryuchiueda (https://github.com/ryuichiueda) and stillgreyfox (https://github.com/stillgreyfox) to suit my needs for Robotics coursework at MsCV (ViBot).
 
-The entire installation process taken about an hour, however, depending on your hardware configuration it shouldn't take more than half an hour. Rick and Morty for life.
+The entire installation process takes some time, however, depending on your hardware configuration and internet speed, you should look forward to at least 30 minutes of install time. Rick and Morty for life.
