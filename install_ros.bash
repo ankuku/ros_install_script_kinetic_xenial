@@ -67,7 +67,7 @@ sudo apt-get install -y ros-$ROS_VER-realsense-camera
 # If you face issues at this stage, I encourage you to go through the link - /
 # https://answers.ros.org/question/246015/installing-turtlebot-on-ros-kinetic/ /
 # and perform the steps as mentioned to do away with the error /
-# "Unable to locate package ros-kinetic-librealsense-camera" 
+# "Unable to locate package ros-kinetic-realsense-camera" 
 
 
 sudo apt-get install -y g++ automake autoconf cmake
