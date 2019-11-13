@@ -36,7 +36,7 @@ sudo rosdep init
 # This is important! If you are using any other OS based on Ubuntu/Debian but not Ubuntu itself, /
 # you might have to run this line on a terminal separately when you see OS not detected error - /
 # "OsNotDetected("Could not detect OS, tried %s" % attempted)"
-export ROS_OS_OVERRIDE="ubuntu:xenial"
+echo 'export ROS_OS_OVERRIDE="ubuntu:xenial"' >> ~/.bashrc
 ###############
 
 rosdep update
